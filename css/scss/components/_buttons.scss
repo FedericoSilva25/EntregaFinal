@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// 🎨 Estilos base para botones
+.btn {
+    display: inline-block;
+    padding: $spacing-small $spacing-medium;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+// 🎨 Botón primario
+.btn-primary {
+    @include button-styles($primary-color, $primary-hover);
+}
+
+// 🎨 Botón secundario
+.btn-secondary {
+    @include button-styles($secondary-color, $secondary-hover);
+}
+
+// 🎨 Botón con borde
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    @include transition(background-color, 0.3s);
+
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}

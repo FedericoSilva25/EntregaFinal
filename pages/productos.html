@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <!-- Navbar con Bootstrap para responsividad -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logoImagen.png" alt="Logo" style="width: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../pages/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/testimonios.html">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5">
+    <h1 class="text-center mb-4">Nuestros productos</h1>
+    <div class="row text-center">
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+                <img src="../img/productomujer.png" class="card-img-top" alt="Ropa de mujer">
+                <div class="card-body">
+                    <h5 class="card-title">Ropa de mujer</h5>
+                    <a href="../pages/productos.html" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+                <img src="../img/productohombre.png" class="card-img-top" alt="Ropa de hombre">
+                <div class="card-body">
+                    <h5 class="card-title">Ropa de hombre</h5>
+                    <a href="../pages/productos.html" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="card">
+                <img src="../img/productoaccesorio.png" class="card-img-top" alt="Accesorios">
+                <div class="card-body">
+                    <h5 class="card-title">Accesorios</h5>
+                    <a href="../pages/productos.html" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light text-dark mt-5 p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <h5>Información general</h5>
+                <ul class="list-unstyled">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/productos.html">Productos</a></li>
+                    <li><a href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="../pages/testimonios.html">Testimonios</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5>Redes</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h5>Suscribirse</h5>
+                <p>Únete a nuestro boletín para recibir novedades y lanzamientos.</p>
+                <form>
+                    <input type="email" placeholder="Correo electrónico" class="form-control mb-2" required>
+                    <button class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

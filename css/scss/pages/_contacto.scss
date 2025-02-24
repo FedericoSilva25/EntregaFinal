@@ -1,0 +1,69 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.contacto {
+    padding: $spacing-large 0;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: $spacing-medium;
+
+        @include respond-to(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    .formulario {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: $spacing-medium;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: $text-color;
+            display: block;
+            margin-bottom: $spacing-small;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: $spacing-small;
+            border: 1px solid $shadow-color;
+            border-radius: $border-radius;
+            font-size: 1rem;
+            color: $text-color;
+            background-color: #fff;
+            transition: border-color 0.3s ease-in-out;
+
+            &:focus {
+                border-color: $primary-color;
+                outline: none;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-enviar {
+            margin-top: $spacing-medium;
+            @include button-styles($primary-color, $primary-hover);
+            width: 100%;
+        }
+    }
+
+    .mensaje-confirmacion {
+        margin-top: $spacing-medium;
+        font-size: 1rem;
+        color: $secondary-dark;
+        display: none; // Se puede hacer dinámico con JavaScript
+    }
+}

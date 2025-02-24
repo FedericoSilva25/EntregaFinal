@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.sobre-nosotros {
+    text-align: center;
+    padding: $spacing-large;
+
+    .contenido {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: $spacing-medium;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: $spacing-medium;
+
+        @include respond-to(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $text-color;
+        margin-bottom: $spacing-small;
+    }
+}

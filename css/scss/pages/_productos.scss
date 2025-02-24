@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.productos {
+    padding: $spacing-large 0;
+
+    .lista-productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: $spacing-medium;
+        justify-content: center;
+    }
+
+    .producto {
+        background-color: $light-color;
+        padding: $spacing-medium;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $box-shadow-large;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: $border-radius;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: $primary-color;
+            margin-top: $spacing-small;
+        }
+
+        p {
+            font-size: 1rem;
+            color: $text-color;
+            margin-bottom: $spacing-small;
+        }
+
+        .btn {
+            @include button-styles($primary-color, $primary-hover);
+        }
+    }
+}

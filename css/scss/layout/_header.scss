@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+header {
+    background-color: $light-color;
+    padding: $spacing-small 0;
+    box-shadow: 0 2px 5px $shadow-color;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    .navbar-brand {
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    .nav-link {
+        color: $secondary-color;
+        @include transition(color, 0.3s);
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

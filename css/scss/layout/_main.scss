@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+main {
+    text-align: center;
+    padding: $spacing-medium;
+
+    .imagen-fondo {
+        @include center-flex();
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .contenedor-texto {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: $spacing-large;
+        border-radius: $border-radius;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: $box-shadow;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: $primary-color;
+        margin-bottom: $spacing-medium;
+
+        @include respond-to(lg) {
+            font-size: 2.2rem;
+        }
+        @include respond-to(sm) {
+            font-size: 1.8rem;
+        }
+        @include respond-to(xs) {
+            font-size: 1.6rem;
+        }
+    }
+
+    .boton-productos {
+        @include button-styles($primary-color, $primary-hover);
+    }
+}

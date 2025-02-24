@@ -1,0 +1,34 @@
+
+@use "sass:color"; // Importar módulo color para usar color.adjust()
+
+//  Colores principales
+$primary-color: #4d94ff;
+$secondary-color: #6c9ecf;
+$secondary-dark: color.adjust($secondary-color, $lightness: -15%);
+$light-color: #e1f2fb;
+$text-color: #333;
+$background-color: #f2f8fc;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$primary-hover: color.adjust($primary-color, $lightness: -8%);
+$secondary-hover: color.adjust($secondary-color, $lightness: -10%);
+
+
+// Breakpoints para media queries
+$breakpoint-lg: 1200px;
+$breakpoint-md: 992px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+
+// Tipografía
+$font-primary: 'Montserrat', Arial, sans-serif;
+
+// Espaciados y contenedores
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+$container-width: 1200px;
+
+// Bordes y sombras
+$border-radius: 5px;
+$box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$box-shadow-large: 0 4px 10px rgba(0, 0, 0, 0.15);

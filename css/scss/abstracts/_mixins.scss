@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+// Mixin para transiciones
+@mixin transition($property, $time) {
+  transition: $property $time ease-in-out;
+}
+
+// Mixin para estilos de botones
+@mixin button-styles(
+  $bg-color, 
+  $hover-bg-color, 
+  $text-color: white, 
+  $padding: 10px 20px, 
+  $border-radius: $border-radius
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  text-decoration: none;
+  border-radius: $border-radius;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  @include transition(background-color, 0.3s);
+
+  &:hover {
+      background-color: $hover-bg-color;
+  }
+}
+
+// Mixin para centrar elementos con flex
+@mixin center-flex($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == xs {
+      @media (max-width: $breakpoint-xs) { @content; }
+  } @else if $breakpoint == sm {
+      @media (max-width: $breakpoint-sm) { @content; }
+  } @else if $breakpoint == md {
+      @media (max-width: $breakpoint-md) { @content; }
+  } @else if $breakpoint == lg {
+      @media (max-width: $breakpoint-lg) { @content; }
+  }
+}
