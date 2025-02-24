@@ -1,0 +1,96 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+main {
+    text-align: center;
+    padding: $spacing-large;
+
+    .imagen-fondo {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: url('../img/hero-background.jpg') center/cover no-repeat;
+        
+        // Capa de oscurecimiento para mejorar contraste
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .contenedor-texto {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: $spacing-large;
+        border-radius: $border-radius;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: $box-shadow-large;
+        animation: fadeIn 1s ease-in-out;
+
+        h1 {
+            font-size: 2.5rem;
+            color: $primary-color;
+            margin-bottom: $spacing-medium;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            @include respond-to(lg) {
+                font-size: 2.2rem;
+            }
+            @include respond-to(sm) {
+                font-size: 1.8rem;
+            }
+            @include respond-to(xs) {
+                font-size: 1.6rem;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $text-color;
+            line-height: 1.6;
+        }
+    }
+
+    .boton-productos {
+        @include button-styles($primary-color, $primary-hover);
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        border-radius: $border-radius;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// Animación de entrada de texto
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

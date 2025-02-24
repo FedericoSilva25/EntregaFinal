@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: white;
+    position: relative;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 15px rgba($primary-color, 0.2);
+    }
+
+    &:hover .card-img-top::after {
+        opacity: 0.2;
+    }
+}
+
+// Imagen de la tarjeta con overlay al hacer hover
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+// Contenido de la tarjeta
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $spacing-medium;
+    text-align: center;
+
+    h2 {
+        font-size: 1.4rem;
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    p {
+        color: $text-color;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .btn {
+        margin-top: auto;
+    }
+}
+
+// Espaciado adicional en móviles
+@media (max-width: $breakpoint-sm) {
+    .card {
+        margin-bottom: $spacing-large;
+    }
+}

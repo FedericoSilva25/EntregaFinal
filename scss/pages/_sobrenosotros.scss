@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.sobre-nosotros {
+    text-align: center;
+    padding: $spacing-large;
+    position: relative;
+    background: url('../img/about-background.jpg') center/cover no-repeat;
+    backdrop-filter: blur(5px);
+
+    .contenido {
+        max-width: 850px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, rgba($primary-color, 0.1), rgba($secondary-color, 0.1));
+        padding: $spacing-large;
+        border-radius: $border-radius * 2;
+        box-shadow: $box-shadow-large;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacing-medium;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: $primary-color;
+            margin: $spacing-small auto;
+        }
+
+        @include respond-to(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1.3rem;
+        color: $text-color;
+        margin-bottom: $spacing-small;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    // 🔹 Animación de entrada para el contenido
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+// 🔹 Ajustes en dispositivos móviles
+@media (max-width: $breakpoint-sm) {
+    .sobre-nosotros {
+        padding: $spacing-medium;
+
+        .contenido {
+            padding: $spacing-medium;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}

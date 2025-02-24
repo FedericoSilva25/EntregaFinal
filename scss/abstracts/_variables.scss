@@ -11,6 +11,19 @@ $background-color: #f2f8fc;
 $shadow-color: rgba(0, 0, 0, 0.1);
 $primary-hover: color.adjust($primary-color, $lightness: -8%);
 $secondary-hover: color.adjust($secondary-color, $lightness: -10%);
+$dark-color: #1a1a1a; 
+$accent-color: #ff6b6b; 
+
+//Grises
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
 
 
 // Breakpoints para media queries
@@ -32,3 +45,13 @@ $container-width: 1200px;
 $border-radius: 5px;
 $box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 $box-shadow-large: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+// Tamaño de fuente
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 20px;
+$font-size-xl: 24px;
+
+
+// Transiciones globales
+$transition: all 0.3s ease-in-out;

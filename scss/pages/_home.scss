@@ -1,0 +1,82 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.home {
+    text-align: center;
+    padding: $spacing-large;
+
+    .hero {
+        @include center-flex(column);
+        position: relative;
+        background: linear-gradient(rgba($primary-color, 0.8), rgba($secondary-color, 0.7)),
+            url('../img/hero-background.jpg') center/cover no-repeat;
+        padding: $spacing-large * 2;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-large;
+        color: white;
+        animation: fadeIn 1s ease-in-out;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: $spacing-medium;
+            letter-spacing: 1px;
+
+            @include respond-to(sm) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto $spacing-medium;
+            line-height: 1.6;
+        }
+
+        .btn {
+            @include button-styles(white, rgba($primary-color, 0.9));
+            color: $primary-color;
+            font-size: 1.2rem;
+            padding: 14px 28px;
+            border-radius: $border-radius * 2;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: rgba($secondary-color, 0.9);
+                color: white;
+            }
+        }
+    }
+}
+
+// 🔹 Animación de entrada para la sección Hero
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 🔹 Ajustes en dispositivos móviles
+@media (max-width: $breakpoint-sm) {
+    .home {
+        padding: $spacing-medium;
+
+        .hero {
+            padding: $spacing-large;
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

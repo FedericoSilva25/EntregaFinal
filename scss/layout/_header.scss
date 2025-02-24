@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+header {
+    background: linear-gradient(135deg, rgba($light-color, 0.9), rgba($primary-color, 0.7)); 
+    padding: $spacing-small 0;
+    box-shadow: 0 2px 10px $shadow-color;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease-in-out;
+
+    .navbar {
+        padding: $spacing-small 0;
+    }
+
+    .navbar-brand {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: $transition;
+
+        &:hover {
+            color: $secondary-dark;
+        }
+    }
+
+    .nav-link {
+        color: $secondary-color;
+        font-weight: 500;
+        padding: 10px 15px;
+        transition: color 0.3s, transform 0.2s;
+
+        &:hover {
+            color: $primary-color;
+            transform: scale(1.1);
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        background: none;
+        outline: none;
+
+        .navbar-toggler-icon {
+            filter: brightness(0) saturate(100%) invert(24%) sepia(45%) saturate(616%) hue-rotate(180deg) brightness(93%) contrast(85%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover .navbar-toggler-icon {
+            transform: rotate(90deg);
+        }
+    }
+}

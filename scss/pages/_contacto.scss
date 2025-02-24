@@ -1,0 +1,122 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.contacto {
+    padding: $spacing-large 0;
+    text-align: center;
+
+    h1 {
+        font-size: 2.8rem;
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $spacing-medium;
+
+        @include respond-to(sm) {
+            font-size: 2rem;
+        }
+    }
+
+    .formulario {
+        max-width: 600px;
+        margin: 0 auto;
+        background: linear-gradient(135deg, rgba($primary-color, 0.15), rgba($secondary-color, 0.15));
+        padding: $spacing-large;
+        border-radius: $border-radius * 2;
+        box-shadow: $box-shadow-large;
+        backdrop-filter: blur(5px);
+
+        label {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: $text-color;
+            display: block;
+            margin-bottom: $spacing-small;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: $spacing-medium;
+            border: 1px solid rgba($shadow-color, 0.5);
+            border-radius: $border-radius;
+            font-size: 1rem;
+            color: $text-color;
+            background-color: rgba(255, 255, 255, 0.85);
+            transition: all 0.3s ease-in-out;
+            box-shadow: none;
+
+            &:focus {
+                border-color: $primary-color;
+                outline: none;
+                box-shadow: 0 4px 10px rgba($primary-color, 0.2);
+                background-color: white;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .btn-enviar {
+            margin-top: $spacing-medium;
+            @include button-styles($primary-color, $primary-hover);
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            border-radius: $border-radius * 2;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 12px rgba($primary-color, 0.3);
+            }
+        }
+    }
+
+    // 🔹 Mensaje de confirmación con animación
+    .mensaje-confirmacion {
+        margin-top: $spacing-medium;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: $secondary-dark;
+        background-color: rgba($secondary-color, 0.15);
+        padding: $spacing-medium;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+
+        &.activo {
+            display: block;
+        }
+    }
+}
+
+// 🔹 Animación de entrada para la confirmación
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 🔹 Ajustes en dispositivos móviles
+@media (max-width: $breakpoint-sm) {
+    .contacto {
+        padding: $spacing-medium;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .formulario {
+            padding: $spacing-medium;
+        }
+    }
+}
