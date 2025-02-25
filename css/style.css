@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -349,6 +350,18 @@ main .boton-productos:hover {
     transform: translateY(0);
   }
 }
+.image-fixed {
+  object-fit: cover;
+  height: 100%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
 .btn {
   display: inline-block;
   padding: 8px 16px;
@@ -745,6 +758,64 @@ main .boton-productos:hover {
     height: 250px;
   }
 }
+.testimonio-img {
+  width: 50%;
+  /* Imagenes más grandes */
+  max-height: 250px;
+  /* Ajustar la altura */
+  object-fit: cover;
+  border-radius: 10px;
+  /* Pequeño redondeo sin ser circular */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonio-text {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 500px;
+}
+
+/* Mover los indicadores más abajo */
+.carousel-indicators {
+  position: relative;
+  bottom: -20px;
+}
+
+/* Estilo para los indicadores (los puntitos del carrusel) */
+.carousel-indicators button {
+  background-color: #4d94ff !important;
+  /* Color azul para mayor visibilidad */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+.carousel-indicators button.active {
+  background-color: #003366;
+  /* Azul oscuro cuando está activo */
+  opacity: 1;
+}
+
+/* Estilo para las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+  /* Convierte el blanco en negro para mejor visibilidad */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  /* Hace que sean más visibles al pasar el mouse */
+}
+
 .contacto {
   padding: 24px 0;
   text-align: center;
@@ -863,6 +934,40 @@ main .boton-productos:hover {
     padding: 16px;
   }
 }
+/* Estilo de los campos del formulario */
+.input-custom {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out;
+}
+.input-custom:focus {
+  border-color: #4d94ff;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(77, 148, 255, 0.5);
+}
+
+/* Estilo del botón de enviar */
+.btn-custom {
+  background-color: #4d94ff;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn-custom:hover {
+  background-color: #003366;
+}
+
+/* Ajustar el mensaje de confirmación */
+.mensaje-confirmacion {
+  font-size: 1rem;
+  color: #003366;
+  margin-top: 20px;
+}
+
 .sobre-nosotros {
   text-align: center;
   padding: 24px;

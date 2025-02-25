@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcata</title>
+    <title>Arcata - Moda y Estilo</title>
+
+    <meta name="description"
+        content="Descubre la moda con Arcata. Ropa y accesorios con estilo y calidad. Compra ahora.">
+    <meta name="keywords" content="moda, ropa, estilo, calidad, accesorios, Arcata">
+    <meta name="author" content="Arcata">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -14,7 +19,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Navegación principal">
             <div class="container">
                 <a class="navbar-brand" href="#">Arcata</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -24,11 +29,14 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" href="./index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/sobrenosotros.html">Sobre nosotros</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/testimonios.html">Testimonios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html"
+                                aria-label="Ir a productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/sobrenosotros.html"
+                                aria-label="Sobre nosotros">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/testimonios.html"
+                                aria-label="Testimonios">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html"
+                                aria-label="Contacto">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,14 +44,13 @@
     </header>
 
     <main>
-        <div class="container my-5">
+        <section class="container my-5">
             <div class="row align-items-center">
                 <!-- Imagen del logo -->
                 <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <img src="./img/logoLetras.png" alt="Logo de Arcata" class="img-fluid"
+                    <img src="./img/logoLetras.png" alt="Logo de la marca Arcata" class="img-fluid"
                         style="max-width: 100%; height: auto;">
                 </div>
-
                 <!-- Texto y botón -->
                 <div class="col-md-6 text-center">
                     <h1>Descubre nuestras colecciones impresionantes</h1>
@@ -51,14 +58,14 @@
                     <a href="./pages/productos.html" class="btn btn-primary">Ver Productos</a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer class="bg-light py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-6">
-                    <h2>Información general</h2>
+                    <h3>Información general</h3>
                     <ul class="list-unstyled">
                         <li><a href="./index.html">Inicio</a></li>
                         <li><a href="./pages/productos.html">Productos</a></li>
@@ -67,21 +74,24 @@
                         <li><a href="./pages/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
+
                 <div class="col-md-4 col-sm-6">
-                    <h2>Redes</h2>
+                    <h3>Redes</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#" aria-label="Ir a Instagram">Instagram</a></li>
+                        <li><a href="#" aria-label="Ir a Facebook">Facebook</a></li>
+                        <li><a href="#" aria-label="Ir a Twitter">Twitter</a></li>
                     </ul>
                 </div>
 
+
                 <div class="col-md-4 col-sm-6">
-                    <h2>Suscribirse</h2>
+                    <h3>Suscribirse</h3>
                     <p>Únete a nuestro boletín para recibir novedades y lanzamientos.</p>
                     <form>
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required
+                                aria-label="Correo electrónico para suscripción">
                             <button class="btn btn-primary" type="submit">Enviar</button>
                         </div>
                     </form>

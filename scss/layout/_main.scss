@@ -14,7 +14,7 @@ main {
         justify-content: center;
         overflow: hidden;
         background: url('../img/hero-background.jpg') center/cover no-repeat;
-        
+
         // Capa de oscurecimiento para mejorar contraste
         &::before {
             content: "";
@@ -55,9 +55,11 @@ main {
             @include respond-to(lg) {
                 font-size: 2.2rem;
             }
+
             @include respond-to(sm) {
                 font-size: 1.8rem;
             }
+
             @include respond-to(xs) {
                 font-size: 1.6rem;
             }
@@ -89,8 +91,23 @@ main {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+
+.image-fixed {
+    object-fit: cover;
+    height: 100%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+}
+
