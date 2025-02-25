@@ -783,8 +783,7 @@ main .boton-productos:hover {
 
 /* Estilo para los indicadores (los puntitos del carrusel) */
 .carousel-indicators button {
-  background-color: #4d94ff !important;
-  /* Color azul para mayor visibilidad */
+  background-color: #4d94ff !important; /* Color azul para mayor visibilidad */
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -793,16 +792,14 @@ main .boton-productos:hover {
   transition: opacity 0.3s ease-in-out;
 }
 .carousel-indicators button.active {
-  background-color: #003366;
-  /* Azul oscuro cuando está activo */
+  background-color: #003366 !important; /* Azul oscuro cuando está activo */
   opacity: 1;
 }
 
 /* Estilo para las flechas del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: invert(100%);
-  /* Convierte el blanco en negro para mejor visibilidad */
+  filter: invert(100%); /* Convierte el blanco en negro para mejor visibilidad */
 }
 
 .carousel-control-prev,
@@ -812,8 +809,7 @@ main .boton-productos:hover {
 }
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  opacity: 1;
-  /* Hace que sean más visibles al pasar el mouse */
+  opacity: 1; /* Hace que sean más visibles al pasar el mouse */
 }
 
 .contacto {
